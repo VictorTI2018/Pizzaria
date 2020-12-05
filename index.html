@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="app">
+        <header class="header">
+            <h1>Pizzaria Javascript</h1>
+        </header>
+        <main class="content">
+            <section class="section-dados">
+                <div class="col-md-6 img-mobile">
+                    <img src="https://www.foodconnection.com.br/sites/foodconnection.com/files/styles/article_featured_retina/public/uploads/2017/11/pizza-porcionamento.png?itok=wwFL0aAE"
+                        alt="Pizzaria" class="img-responsive shadow">
+                </div>
+                <div class="col-md-6">
+                    <div class="card shadow">
+                        <div class="card-header">
+                            <div id="message">Dados do Pedido</div>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <div class="col-md-6">
+                                    <label>N° da Meda</label>
+                                    <input type="text" name="mesa" id="mesa" class="form-control" placeholder="N° da mesa.">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <label style="display: block;">Item do Pedido: </label>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="produto" id="rbPizza" checked
+                                            autofocus>
+                                        <label class="form-check-label">
+                                            Pizza
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="produto" id="rbBebida">
+                                        <label class="form-check-label">
+                                            Bebida
+                                        </label>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-12">
+                                    <label>Item:</label>
+                                    <select class="form-control" id="pizza">
+                                        <option value='broto'>Pizza Broto</option>
+                                        <option value='media'>Pizza Media</option>
+                                        <option value='grande'>Pizza Grande</option>
+                                        <option value="familia">Pizza Familia</option>
+                                    </select>
+                                    <select class="form-control d-none" id="bebida">
+                                        <option value='guarana'>Refri. Guaraná</option>
+                                        <option value='suco'>Suco Natural</option>
+                                        <option value='agua'>Agua Mineral</option>
+                                        <option value="cerveja">Cerveja</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-12">
+
+                                    <label>Descrição: </label>
+                                    <textarea name="descricao" id="descricao" cols="20" rows="3"
+                                        class="form-control"></textarea>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 offset-md-8">
+                                    <button class="btn btn-primary btn-block" id="btnGerarPedido">
+                                        Gerar Pedido
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <pre id="saidaDoPedido"></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+
+        </footer>
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>
